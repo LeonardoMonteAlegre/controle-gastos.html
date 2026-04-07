@@ -9,18 +9,14 @@
 :root{--bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;--bg4:#222;--green:#22c55e;--green2:#16a34a;--green3:#dcfce7;--green4:#bbf7d0;--border:#2a2a2a;--border2:#333;--text:#f0f0f0;--text2:#aaa;--text3:#666;--red:#ef4444;--red2:#fca5a5;--amber:#f59e0b;--amber2:#fde68a;}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);font-size:15px;min-height:100vh;}
 a{color:var(--green);text-decoration:none;}
-
-/* AUTH */
 .auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
 .auth-box{background:var(--bg2);border:0.5px solid var(--border);border-radius:16px;padding:2rem;width:100%;max-width:400px;}
 .auth-logo{text-align:center;margin-bottom:2rem;}
 .auth-logo h1{font-size:22px;font-weight:500;color:var(--green);}
 .auth-logo p{font-size:13px;color:var(--text2);margin-top:4px;}
-.auth-tabs{display:flex;gap:0;margin-bottom:1.5rem;border:0.5px solid var(--border);border-radius:10px;overflow:hidden;}
+.auth-tabs{display:flex;margin-bottom:1.5rem;border:0.5px solid var(--border);border-radius:10px;overflow:hidden;}
 .auth-tab{flex:1;padding:9px;text-align:center;font-size:13px;cursor:pointer;background:transparent;border:none;color:var(--text2);transition:all .15s;}
 .auth-tab.active{background:var(--green);color:#000;font-weight:500;}
-
-/* FORMS */
 .fg{display:flex;flex-direction:column;gap:5px;margin-bottom:12px;}
 .fg label{font-size:12px;color:var(--text2);font-weight:500;}
 .fg input,.fg select,.fg textarea{font-size:14px;padding:10px 12px;border:0.5px solid var(--border2);border-radius:8px;background:var(--bg3);color:var(--text);outline:none;width:100%;transition:border .15s;}
@@ -38,11 +34,9 @@ a{color:var(--green);text-decoration:none;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 @media(max-width:500px){.form-row{grid-template-columns:1fr;}}
 .form-full{grid-column:1/-1;}
-.msg{font-size:13px;text-align:center;padding:8px;border-radius:8px;margin-top:8px;}
+.msg{font-size:13px;text-align:center;padding:8px;border-radius:8px;margin-top:8px;min-height:20px;}
 .msg-err{background:#1c0606;color:var(--red2);}
 .msg-ok{background:#052e16;color:var(--green4);}
-
-/* LAYOUT */
 .topbar{background:var(--bg2);border-bottom:0.5px solid var(--border);padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:52px;position:sticky;top:0;z-index:10;}
 .topbar-logo{font-size:15px;font-weight:500;color:var(--green);}
 .topbar-right{display:flex;align-items:center;gap:12px;}
@@ -50,35 +44,25 @@ a{color:var(--green);text-decoration:none;}
 .btn-logout{font-size:12px;padding:5px 12px;border-radius:20px;border:0.5px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;}
 .btn-logout:hover{border-color:var(--red);color:var(--red2);}
 .container{max-width:960px;margin:0 auto;padding:20px 16px;}
-
-/* NAV */
 .nav{display:flex;gap:4px;margin-bottom:1.5rem;flex-wrap:wrap;}
 .nav button{font-size:13px;padding:7px 16px;border-radius:20px;cursor:pointer;border:0.5px solid var(--border2);background:transparent;color:var(--text2);transition:all .15s;}
 .nav button.active{background:var(--green);color:#000;border-color:var(--green);font-weight:500;}
 .nav button:hover:not(.active){border-color:var(--green);color:var(--green);}
 .section{display:none;}
 .section.active{display:block;}
-
-/* CARDS */
 .card{background:var(--bg2);border:0.5px solid var(--border);border-radius:14px;padding:1rem 1.25rem;margin-bottom:1rem;}
 .card-title{font-size:11px;font-weight:500;color:var(--text3);margin-bottom:1rem;text-transform:uppercase;letter-spacing:.05em;}
-
-/* METRICS */
 .metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:1.5rem;}
 @media(max-width:600px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr));}}
 .metric{background:var(--bg3);border:0.5px solid var(--border);border-radius:10px;padding:14px;}
 .metric-label{font-size:11px;color:var(--text3);margin-bottom:6px;text-transform:uppercase;letter-spacing:.03em;}
 .metric-value{font-size:20px;font-weight:500;color:var(--text);}
 .metric-value.green{color:var(--green);}
-
-/* CHARTS */
 .charts-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem;}
 @media(max-width:640px){.charts-row{grid-template-columns:1fr;}}
 .legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;font-size:12px;color:var(--text2);}
 .legend span{display:flex;align-items:center;gap:4px;}
 .ldot{width:10px;height:10px;border-radius:2px;display:inline-block;flex-shrink:0;}
-
-/* TABLE */
 .tbl-wrap{overflow-x:auto;}
 table{width:100%;border-collapse:collapse;font-size:13px;}
 th{text-align:left;padding:8px 10px;font-size:11px;font-weight:500;color:var(--text3);border-bottom:0.5px solid var(--border);text-transform:uppercase;letter-spacing:.03em;}
@@ -87,42 +71,45 @@ tr:last-child td{border-bottom:none;}
 .pill{display:inline-block;font-size:11px;padding:2px 9px;border-radius:20px;}
 .pill-cred{background:#0c2a1a;color:var(--green4);}
 .pill-deb{background:#1a1a0c;color:var(--amber2);}
-
-/* FILTER */
+.pill-parc{background:#1a0a2a;color:#d8b4fe;}
 .filter-row{display:flex;gap:8px;margin-bottom:1rem;flex-wrap:wrap;}
 .filter-row select{font-size:13px;padding:7px 10px;border:0.5px solid var(--border2);border-radius:8px;background:var(--bg2);color:var(--text);outline:none;}
 .filter-row select:focus{border-color:var(--green);}
-
-/* LIMITS */
 .limit-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
 .lbar-bg{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden;}
 .lbar-fill{height:100%;border-radius:3px;transition:width .4s;}
-
-/* SETTINGS */
 .tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1rem;}
 .tag-item{display:flex;align-items:center;gap:6px;background:var(--bg3);border:0.5px solid var(--border2);border-radius:8px;padding:6px 10px;font-size:13px;}
 .tag-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
 .tag-del{background:transparent;border:none;color:var(--text3);cursor:pointer;font-size:16px;line-height:1;padding:0 2px;}
 .tag-del:hover{color:var(--red2);}
-
-/* ADMIN */
 .admin-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:1.5rem;}
 @media(max-width:600px){.admin-grid{grid-template-columns:1fr 1fr;}}
 .user-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:0.5px solid var(--border);}
 .user-row:last-child{border-bottom:none;}
 .avatar{width:32px;height:32px;border-radius:50%;background:var(--bg4);border:0.5px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:var(--green);flex-shrink:0;}
 .badge-admin{font-size:10px;padding:2px 7px;border-radius:20px;background:#052e16;color:var(--green4);margin-left:6px;}
-
 .empty{text-align:center;padding:2.5rem 1rem;color:var(--text3);font-size:14px;}
 .loading{text-align:center;padding:2rem;color:var(--text3);font-size:14px;}
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);padding:10px 20px;border-radius:20px;font-size:13px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:100;}
 .toast.show{opacity:1;}
 .divider{border:none;border-top:0.5px solid var(--border);margin:1.5rem 0;}
+.parc-card{background:var(--bg3);border:0.5px solid var(--border2);border-radius:12px;padding:1rem;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.parc-info{flex:1;}
+.parc-desc{font-size:14px;font-weight:500;color:var(--text);margin-bottom:4px;}
+.parc-meta{font-size:12px;color:var(--text2);}
+.parc-progress{display:flex;align-items:center;gap:8px;margin-top:8px;}
+.parc-bar-bg{flex:1;height:4px;background:var(--border);border-radius:2px;overflow:hidden;}
+.parc-bar-fill{height:100%;border-radius:2px;background:var(--green);}
+.parc-valor{font-size:16px;font-weight:500;color:var(--green);white-space:nowrap;}
+.lancamentos-center{max-width:600px;margin:0 auto;}
+.tab-toggle{display:flex;gap:0;margin-bottom:1.5rem;border:0.5px solid var(--border);border-radius:10px;overflow:hidden;max-width:600px;margin-left:auto;margin-right:auto;margin-bottom:1.5rem;}
+.tab-toggle button{flex:1;padding:9px;font-size:13px;cursor:pointer;background:transparent;border:none;color:var(--text2);transition:all .15s;}
+.tab-toggle button.active{background:var(--green);color:#000;font-weight:500;}
 </style>
 </head>
 <body>
 
-<!-- AUTH -->
 <div id="auth-screen" class="auth-wrap">
   <div class="auth-box">
     <div class="auth-logo">
@@ -137,19 +124,18 @@ tr:last-child td{border-bottom:none;}
       <div class="fg"><label>E-mail</label><input type="email" id="login-email" placeholder="seu@email.com"></div>
       <div class="fg"><label>Senha</label><input type="password" id="login-pass" placeholder="••••••••"></div>
       <button class="btn btn-green" id="btn-login" onclick="doLogin()">Entrar</button>
-      <div id="login-msg"></div>
+      <div id="login-msg" class="msg"></div>
     </div>
     <div id="tab-signup" style="display:none">
       <div class="fg"><label>Nome</label><input type="text" id="signup-nome" placeholder="Seu nome"></div>
       <div class="fg"><label>E-mail</label><input type="email" id="signup-email" placeholder="seu@email.com"></div>
       <div class="fg"><label>Senha</label><input type="password" id="signup-pass" placeholder="Mínimo 6 caracteres"></div>
       <button class="btn btn-green" id="btn-signup" onclick="doSignup()">Criar conta</button>
-      <div id="signup-msg"></div>
+      <div id="signup-msg" class="msg"></div>
     </div>
   </div>
 </div>
 
-<!-- APP -->
 <div id="app-screen" style="display:none">
   <div class="topbar">
     <span class="topbar-logo">Controle de Gastos</span>
@@ -163,6 +149,7 @@ tr:last-child td{border-bottom:none;}
       <button class="active" onclick="showSection('dashboard',this)">Dashboard</button>
       <button onclick="showSection('lancamentos',this)">Lançamentos</button>
       <button onclick="showSection('historico',this)">Histórico</button>
+      <button onclick="showSection('parcelamentos',this)">Parcelamentos</button>
       <button onclick="showSection('limites',this)">Limites</button>
       <button onclick="showSection('config',this)">Configurações</button>
       <button id="btn-admin" style="display:none" onclick="showSection('admin',this)">Admin</button>
@@ -182,6 +169,7 @@ tr:last-child td{border-bottom:none;}
           <div class="legend">
             <span><span class="ldot" style="background:#22c55e"></span>Crédito</span>
             <span><span class="ldot" style="background:#f59e0b"></span>Débito</span>
+            <span><span class="ldot" style="background:#a855f7"></span>Parcelas</span>
           </div>
           <div style="position:relative;height:200px"><canvas id="chartMensal"></canvas></div>
         </div>
@@ -194,23 +182,49 @@ tr:last-child td{border-bottom:none;}
 
     <!-- LANÇAMENTOS -->
     <div id="s-lancamentos" class="section">
-      <div class="card" style="max-width:560px">
-        <div class="card-title">Novo lançamento</div>
-        <div class="form-row">
-          <div class="fg"><label>Data</label><input type="date" id="f-data"></div>
-          <div class="fg"><label>Tipo</label>
-            <select id="f-tipo">
-              <option value="credito">Crédito</option>
-              <option value="debito">Débito</option>
-            </select>
+      <div class="tab-toggle">
+        <button class="active" id="tab-avulso-btn" onclick="switchLancTab('avulso')">Lançamento avulso</button>
+        <button id="tab-parc-btn" onclick="switchLancTab('parcelado')">Compra parcelada</button>
+      </div>
+
+      <!-- Avulso -->
+      <div id="lanc-avulso" class="lancamentos-center">
+        <div class="card">
+          <div class="card-title">Novo lançamento</div>
+          <div class="form-row">
+            <div class="fg"><label>Data</label><input type="date" id="f-data"></div>
+            <div class="fg"><label>Tipo</label>
+              <select id="f-tipo">
+                <option value="credito">Crédito</option>
+                <option value="debito">Débito</option>
+              </select>
+            </div>
+            <div class="fg form-full"><label>Descrição</label><input type="text" id="f-desc" placeholder="Ex: Mercado, Netflix..."></div>
+            <div class="fg"><label>Valor (R$)</label><input type="number" id="f-valor" placeholder="0,00" min="0" step="0.01"></div>
+            <div class="fg"><label>Categoria</label><select id="f-cat"></select></div>
+            <div class="fg form-full"><label>Cartão</label><select id="f-cartao"></select></div>
           </div>
-          <div class="fg form-full"><label>Descrição</label><input type="text" id="f-desc" placeholder="Ex: Mercado, Netflix..."></div>
-          <div class="fg"><label>Valor (R$)</label><input type="number" id="f-valor" placeholder="0,00" min="0" step="0.01"></div>
-          <div class="fg"><label>Categoria</label><select id="f-cat"></select></div>
-          <div class="fg form-full"><label>Cartão</label><select id="f-cartao"></select></div>
+          <button class="btn btn-green" id="btn-add" onclick="addTransaction()">Adicionar lançamento</button>
+          <div id="form-msg" class="msg"></div>
         </div>
-        <button class="btn btn-green" id="btn-add" onclick="addTransaction()">Adicionar lançamento</button>
-        <div id="form-msg"></div>
+      </div>
+
+      <!-- Parcelado -->
+      <div id="lanc-parcelado" style="display:none" class="lancamentos-center">
+        <div class="card">
+          <div class="card-title">Nova compra parcelada</div>
+          <div class="form-row">
+            <div class="fg form-full"><label>Descrição do produto</label><input type="text" id="p-desc" placeholder="Ex: Tênis Nike, iPhone..."></div>
+            <div class="fg"><label>Valor de cada parcela (R$)</label><input type="number" id="p-valor" placeholder="0,00" min="0" step="0.01"></div>
+            <div class="fg"><label>Número de parcelas</label><input type="number" id="p-total" placeholder="Ex: 12" min="2" max="60"></div>
+            <div class="fg"><label>Mês da 1ª parcela</label><input type="month" id="p-inicio"></div>
+            <div class="fg"><label>Categoria</label><select id="p-cat"></select></div>
+            <div class="fg form-full"><label>Cartão</label><select id="p-cartao"></select></div>
+          </div>
+          <div id="p-preview" style="margin:12px 0;padding:10px;background:var(--bg3);border-radius:8px;font-size:13px;color:var(--text2);display:none"></div>
+          <button class="btn btn-green" id="btn-parc" onclick="addParcelamento()">Cadastrar parcelamento</button>
+          <div id="parc-form-msg" class="msg"></div>
+        </div>
       </div>
     </div>
 
@@ -220,9 +234,10 @@ tr:last-child td{border-bottom:none;}
         <select id="filter-mes" onchange="renderHistorico()"><option value="">Todos os meses</option></select>
         <select id="filter-cat" onchange="renderHistorico()"><option value="">Todas as categorias</option></select>
         <select id="filter-tipo" onchange="renderHistorico()">
-          <option value="">Crédito e débito</option>
+          <option value="">Todos os tipos</option>
           <option value="credito">Crédito</option>
           <option value="debito">Débito</option>
+          <option value="parcela">Parcela</option>
         </select>
       </div>
       <div class="card tbl-wrap">
@@ -230,6 +245,18 @@ tr:last-child td{border-bottom:none;}
           <th>Data</th><th>Descrição</th><th>Categoria</th><th>Tipo</th><th>Cartão</th><th style="text-align:right">Valor</th><th></th>
         </tr></thead>
         <tbody id="hist-body"><tr><td colspan="7"><div class="loading">Carregando...</div></td></tr></tbody></table>
+      </div>
+    </div>
+
+    <!-- PARCELAMENTOS -->
+    <div id="s-parcelamentos" class="section">
+      <div class="card" style="margin-bottom:1rem">
+        <div class="card-title">Parcelamentos ativos</div>
+        <div id="parc-ativos"><div class="loading">Carregando...</div></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Parcelamentos encerrados</div>
+        <div id="parc-encerrados"><div class="empty">Nenhum encerrado ainda.</div></div>
       </div>
     </div>
 
@@ -249,7 +276,6 @@ tr:last-child td{border-bottom:none;}
     <!-- CONFIGURAÇÕES -->
     <div id="s-config" class="section">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
-        <!-- Categorias -->
         <div class="card">
           <div class="card-title">Categorias</div>
           <div id="cats-list" class="tag-list"></div>
@@ -260,7 +286,6 @@ tr:last-child td{border-bottom:none;}
           </div>
           <button class="btn btn-green btn-sm" onclick="addCategoria()">Adicionar categoria</button>
         </div>
-        <!-- Cartões -->
         <div class="card">
           <div class="card-title">Cartões</div>
           <div id="cards-list" class="tag-list"></div>
@@ -296,11 +321,10 @@ tr:last-child td{border-bottom:none;}
           <table><thead><tr>
             <th>Usuário</th><th>Data</th><th>Descrição</th><th>Categoria</th><th>Tipo</th><th style="text-align:right">Valor</th>
           </tr></thead>
-          <tbody id="admin-tx-body"><tr><td colspan="6"><div class="loading">Carregando...</div></td></tr></tbody></table>
+          <tbody id="admin-tx-body"></tbody></table>
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -313,18 +337,17 @@ const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZ
 const MONTHS=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
 const fmt=v=>'R$ '+Number(v).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
 const today=()=>new Date().toISOString().split('T')[0];
+const thisMonth=()=>{const n=new Date();return n.getFullYear()+'-'+(String(n.getMonth()+1).padStart(2,'0'));};
 
-let session=null, profile=null, transactions=[], categorias=[], cartoes=[], limites={}, allUsers=[], allTx=[];
+let session=null,profile=null,transactions=[],categorias=[],cartoes=[],limites={},parcelamentos=[],allUsers=[],allTx=[];
 
-function hdrs(tok){
-  return {'apikey':SB_KEY,'Authorization':'Bearer '+(tok||SB_KEY),'Content-Type':'application/json','Prefer':'return=representation'};
-}
+function hdrs(tok){return{'apikey':SB_KEY,'Authorization':'Bearer '+(tok||SB_KEY),'Content-Type':'application/json','Prefer':'return=representation'};}
 
 async function sbFetch(path,opts={}){
   const tok=session?.access_token;
   const res=await fetch(SB_URL+path,{...opts,headers:{...hdrs(tok),...(opts.headers||{})}});
   const txt=await res.text();
-  if(!res.ok) throw new Error(txt);
+  if(!res.ok)throw new Error(txt);
   return txt?JSON.parse(txt):[];
 }
 
@@ -336,7 +359,9 @@ function showToast(msg,err){
 
 function setMsg(id,msg,ok){
   const el=document.getElementById(id);
-  el.className='msg '+(ok?'msg-ok':'msg-err');el.textContent=msg;
+  if(!el)return;
+  el.className='msg '+(ok?'msg-ok':'msg-err');
+  el.textContent=msg;
 }
 
 /* AUTH */
@@ -346,14 +371,30 @@ function switchTab(t){
   document.querySelectorAll('.auth-tab').forEach((b,i)=>b.classList.toggle('active',(t==='login'&&i===0)||(t==='signup'&&i===1)));
 }
 
+async function refreshSession(){
+  if(!session?.refresh_token)return false;
+  try{
+    const data=await fetch(SB_URL+'/auth/v1/token?grant_type=refresh_token',{
+      method:'POST',headers:hdrs(),body:JSON.stringify({refresh_token:session.refresh_token})
+    }).then(r=>r.json());
+    if(data.access_token){session=data;localStorage.setItem('sb_session',JSON.stringify(data));return true;}
+  }catch(e){}
+  return false;
+}
+
 async function doLogin(){
   const email=document.getElementById('login-email').value.trim();
   const pass=document.getElementById('login-pass').value;
   if(!email||!pass){setMsg('login-msg','Preencha e-mail e senha.');return;}
   const btn=document.getElementById('btn-login');btn.disabled=true;btn.textContent='Entrando...';
   try{
-    const data=await sbFetch('/auth/v1/token?grant_type=password',{method:'POST',body:JSON.stringify({email,password:pass})});
-    session=data;await loadApp();
+    const data=await fetch(SB_URL+'/auth/v1/token?grant_type=password',{
+      method:'POST',headers:hdrs(),body:JSON.stringify({email,password:pass})
+    }).then(r=>r.json());
+    if(data.error||!data.access_token)throw new Error(data.error||'Erro');
+    session=data;localStorage.setItem('sb_session',JSON.stringify(data));
+    await loadApp();
+    setInterval(async()=>{await refreshSession();},55*60*1000);
   }catch(e){setMsg('login-msg','E-mail ou senha incorretos.');}
   btn.disabled=false;btn.textContent='Entrar';
 }
@@ -366,20 +407,32 @@ async function doSignup(){
   if(pass.length<6){setMsg('signup-msg','Senha deve ter no mínimo 6 caracteres.');return;}
   const btn=document.getElementById('btn-signup');btn.disabled=true;btn.textContent='Criando conta...';
   try{
-    await sbFetch('/auth/v1/signup',{method:'POST',body:JSON.stringify({email,password:pass,data:{nome}})});
-    setMsg('signup-msg','Conta criada! Verifique seu e-mail para confirmar o cadastro.',true);
+    const data=await fetch(SB_URL+'/auth/v1/signup',{
+      method:'POST',headers:hdrs(),body:JSON.stringify({email,password:pass,data:{nome}})
+    }).then(r=>r.json());
+    if(data.error)throw new Error(data.error);
+    if(data.access_token){
+      session=data;localStorage.setItem('sb_session',JSON.stringify(data));
+      await loadApp();
+      setInterval(async()=>{await refreshSession();},55*60*1000);
+    } else {
+      setMsg('signup-msg','Conta criada! Faça login para continuar.',true);
+      switchTab('login');
+    }
   }catch(e){setMsg('signup-msg','Erro ao criar conta. Tente outro e-mail.');}
   btn.disabled=false;btn.textContent='Criar conta';
 }
 
 async function doLogout(){
-  try{await sbFetch('/auth/v1/logout',{method:'POST'});}catch(e){}
-  session=null;profile=null;transactions=[];categorias=[];cartoes=[];limites={};
+  try{await fetch(SB_URL+'/auth/v1/logout',{method:'POST',headers:hdrs(session?.access_token)});}catch(e){}
+  session=null;profile=null;transactions=[];categorias=[];cartoes=[];limites={};parcelamentos=[];
+  localStorage.removeItem('sb_session');
   document.getElementById('auth-screen').style.display='flex';
   document.getElementById('app-screen').style.display='none';
 }
 
 async function loadApp(){
+  if(!session?.access_token){doLogout();return;}
   document.getElementById('auth-screen').style.display='none';
   document.getElementById('app-screen').style.display='block';
   await loadUserData();
@@ -387,28 +440,31 @@ async function loadApp(){
 }
 
 async function loadUserData(){
-  const [prof,cats,cards,txs,lims]=await Promise.all([
-    sbFetch('/rest/v1/profiles?id=eq.'+session.user.id+'&select=*'),
-    sbFetch('/rest/v1/categorias?user_id=eq.'+session.user.id+'&order=nome.asc'),
-    sbFetch('/rest/v1/cartoes?user_id=eq.'+session.user.id+'&order=nome.asc'),
-    sbFetch('/rest/v1/gastos?user_id=eq.'+session.user.id+'&order=data.desc,id.desc'),
-    sbFetch('/rest/v1/limites?user_id=eq.'+session.user.id)
+  const uid=session.user?.id||session.id;
+  const[prof,cats,cards,txs,lims,parcs]=await Promise.all([
+    sbFetch('/rest/v1/profiles?id=eq.'+uid+'&select=*'),
+    sbFetch('/rest/v1/categorias?user_id=eq.'+uid+'&order=nome.asc'),
+    sbFetch('/rest/v1/cartoes?user_id=eq.'+uid+'&order=nome.asc'),
+    sbFetch('/rest/v1/gastos?user_id=eq.'+uid+'&order=data.desc,id.desc'),
+    sbFetch('/rest/v1/limites?user_id=eq.'+uid),
+    sbFetch('/rest/v1/parcelamentos?user_id=eq.'+uid+'&order=data_inicio.desc')
   ]);
-  profile=prof[0];categorias=cats;cartoes=cards;transactions=txs;
+  profile=prof[0];categorias=cats;cartoes=cards;transactions=txs;parcelamentos=parcs;
   limites={};lims.forEach(l=>limites[l.categoria]=l.valor);
   document.getElementById('topbar-user').textContent=profile?.nome||'';
-  if(profile?.is_admin){document.getElementById('btn-admin').style.display='inline-block';}
+  if(profile?.is_admin)document.getElementById('btn-admin').style.display='inline-block';
   populateSelects();
 }
 
 function populateSelects(){
   const cats=categorias.map(c=>`<option value="${c.nome}">${c.nome}</option>`).join('');
-  ['f-cat','lim-cat'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=cats;});
+  ['f-cat','lim-cat','p-cat'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=cats;});
   const filterCat=document.getElementById('filter-cat');
   if(filterCat)filterCat.innerHTML='<option value="">Todas as categorias</option>'+cats;
   const cards=cartoes.map(c=>`<option value="${c.nome}">${c.nome} (${c.tipo})</option>`).join('');
-  const fc=document.getElementById('f-cartao');if(fc)fc.innerHTML=cards;
+  ['f-cartao','p-cartao'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=cards;});
   document.getElementById('f-data').value=today();
+  const pm=document.getElementById('p-inicio');if(pm)pm.value=thisMonth();
 }
 
 function showSection(id,btn){
@@ -418,21 +474,115 @@ function showSection(id,btn){
   btn.classList.add('active');
   if(id==='dashboard')renderDashboard();
   if(id==='historico')renderHistorico();
+  if(id==='parcelamentos')renderParcelamentos();
   if(id==='limites')renderLimites();
   if(id==='config')renderConfig();
   if(id==='admin')renderAdmin();
 }
 
-/* TRANSACTIONS */
+function switchLancTab(t){
+  document.getElementById('lanc-avulso').style.display=t==='avulso'?'block':'none';
+  document.getElementById('lanc-parcelado').style.display=t==='parcelado'?'block':'none';
+  document.getElementById('tab-avulso-btn').classList.toggle('active',t==='avulso');
+  document.getElementById('tab-parc-btn').classList.toggle('active',t==='parcelado');
+}
+
+/* PARCELAMENTOS — gera parcelas virtuais para o mês atual */
+function getParcVirtuais(mes){
+  const[ano,m]=mes.split('-').map(Number);
+  const result=[];
+  parcelamentos.forEach(p=>{
+    const[pAno,pMes]=p.data_inicio.substring(0,7).split('-').map(Number);
+    const diff=(ano-pAno)*12+(m-pMes);
+    const parcAtual=p.parcela_inicial+diff;
+    if(parcAtual>=p.parcela_inicial&&parcAtual<=p.total_parcelas){
+      result.push({
+        id:'parc_'+p.id+'_'+parcAtual,
+        parc_id:p.id,
+        data:mes+'-01',
+        descricao:p.descricao+' ('+parcAtual+'/'+p.total_parcelas+')',
+        valor:p.valor_parcela,
+        categoria:p.categoria,
+        tipo:'parcela',
+        cartao:p.cartao,
+        parcela_num:parcAtual,
+        total_parcelas:p.total_parcelas
+      });
+    }
+  });
+  return result;
+}
+
+function getAllTxForMonth(mes){
+  const txs=transactions.filter(t=>t.data.startsWith(mes));
+  const parcs=getParcVirtuais(mes);
+  return[...txs,...parcs].sort((a,b)=>b.data.localeCompare(a.data));
+}
+
+/* DASHBOARD */
+let cCat,cMes;
+function renderDashboard(){
+  const mes=thisMonth();
+  const all=getAllTxForMonth(mes);
+  const total=all.reduce((a,t)=>a+t.valor,0);
+  const cred=all.filter(t=>t.tipo==='credito').reduce((a,t)=>a+t.valor,0);
+  const deb=all.filter(t=>t.tipo==='debito').reduce((a,t)=>a+t.valor,0);
+  const parc=all.filter(t=>t.tipo==='parcela').reduce((a,t)=>a+t.valor,0);
+  document.getElementById('metrics-row').innerHTML=`
+    <div class="metric"><div class="metric-label">Total este mês</div><div class="metric-value green">${fmt(total)}</div></div>
+    <div class="metric"><div class="metric-label">Crédito</div><div class="metric-value">${fmt(cred)}</div></div>
+    <div class="metric"><div class="metric-label">Débito</div><div class="metric-value">${fmt(deb)}</div></div>
+    <div class="metric"><div class="metric-label">Parcelas</div><div class="metric-value">${fmt(parc)}</div></div>`;
+
+  const catMap={};
+  all.forEach(t=>catMap[t.categoria]=(catMap[t.categoria]||0)+t.valor);
+  const cLabels=Object.keys(catMap);
+  const cVals=cLabels.map(c=>catMap[c]);
+  const cColors=cLabels.map(c=>(categorias.find(x=>x.nome===c)||{cor:'#6b7280'}).cor);
+  document.getElementById('legend-cat').innerHTML=cLabels.map((c,i)=>`<span><span class="ldot" style="background:${cColors[i]}"></span>${c}</span>`).join('');
+  if(cCat)cCat.destroy();
+  if(cVals.length)cCat=new Chart(document.getElementById('chartCat'),{type:'doughnut',data:{labels:cLabels,datasets:[{data:cVals,backgroundColor:cColors,borderWidth:2,borderColor:'#111'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+fmt(ctx.raw)}}}}});
+
+  const n=new Date(),mL=[],crD=[],dbD=[],paD=[];
+  for(let i=5;i>=0;i--){
+    const d=new Date(n.getFullYear(),n.getMonth()-i,1);
+    const mStr=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');
+    mL.push(MONTHS[d.getMonth()]);
+    const mt=getAllTxForMonth(mStr);
+    crD.push(mt.filter(t=>t.tipo==='credito').reduce((a,t)=>a+t.valor,0));
+    dbD.push(mt.filter(t=>t.tipo==='debito').reduce((a,t)=>a+t.valor,0));
+    paD.push(mt.filter(t=>t.tipo==='parcela').reduce((a,t)=>a+t.valor,0));
+  }
+  if(cMes)cMes.destroy();
+  cMes=new Chart(document.getElementById('chartMensal'),{type:'bar',data:{labels:mL,datasets:[
+    {label:'Crédito',data:crD,backgroundColor:'#22c55e',borderRadius:4},
+    {label:'Débito',data:dbD,backgroundColor:'#f59e0b',borderRadius:4},
+    {label:'Parcelas',data:paD,backgroundColor:'#a855f7',borderRadius:4}
+  ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{color:'#666',autoSkip:false}},y:{grid:{color:'#1a1a1a'},ticks:{color:'#666',callback:v=>'R$'+Math.round(v)}}}}});
+
+  const rec=[...getAllTxForMonth(mes)].slice(0,5);
+  const rl=document.getElementById('recent-list');
+  if(!rec.length){rl.innerHTML='<div class="empty">Nenhum lançamento ainda.</div>';return;}
+  rl.innerHTML=`<div class="tbl-wrap"><table><thead><tr><th>Descrição</th><th>Categoria</th><th>Tipo</th><th style="text-align:right">Valor</th></tr></thead><tbody>`+
+    rec.map(t=>`<tr>
+      <td>${t.descricao}</td>
+      <td><span class="pill" style="background:${(categorias.find(c=>c.nome===t.categoria)||{cor:'#333'}).cor}22;color:${(categorias.find(c=>c.nome===t.categoria)||{cor:'#aaa'}).cor}">${t.categoria}</span></td>
+      <td><span class="pill ${t.tipo==='credito'?'pill-cred':t.tipo==='parcela'?'pill-parc':'pill-deb'}">${t.tipo}</span></td>
+      <td style="text-align:right;font-weight:500">${fmt(t.valor)}</td>
+    </tr>`).join('')+'</tbody></table></div>';
+}
+
+/* TRANSAÇÕES */
 async function addTransaction(){
   const desc=document.getElementById('f-desc').value.trim();
   const valor=parseFloat(document.getElementById('f-valor').value);
   const data=document.getElementById('f-data').value;
-  if(!desc||!valor||valor<=0||!data){setMsg('form-msg','Preencha todos os campos.',false);return;}
+  if(!desc||!valor||valor<=0||!data){setMsg('form-msg','Preencha todos os campos.');return;}
   const btn=document.getElementById('btn-add');btn.disabled=true;btn.textContent='Salvando...';
+  const uid=session.user?.id||session.id;
   try{
     const rows=await sbFetch('/rest/v1/gastos',{method:'POST',body:JSON.stringify({
-      user_id:session.user.id,data,descricao:desc,valor,
+      user_id:uid,data,descricao:desc,valor,
       categoria:document.getElementById('f-cat').value,
       tipo:document.getElementById('f-tipo').value,
       cartao:document.getElementById('f-cartao').value
@@ -440,9 +590,9 @@ async function addTransaction(){
     transactions.unshift(rows[0]);
     document.getElementById('f-desc').value='';document.getElementById('f-valor').value='';
     document.getElementById('f-data').value=today();
-    setMsg('form-msg','Lançamento salvo!',true);setTimeout(()=>document.getElementById('form-msg').textContent='',2500);
+    setMsg('form-msg','Lançamento salvo!',true);setTimeout(()=>{const el=document.getElementById('form-msg');if(el)el.textContent='';},2500);
     showToast('Lançamento adicionado!');populateMonthFilter();
-  }catch(e){setMsg('form-msg','Erro ao salvar.',false);}
+  }catch(e){setMsg('form-msg','Erro ao salvar.');}
   btn.disabled=false;btn.textContent='Adicionar lançamento';
 }
 
@@ -455,57 +605,104 @@ async function deleteTransaction(id){
   }catch(e){showToast('Erro ao excluir.',true);}
 }
 
-function getCurTxs(){
-  const n=new Date();
-  return transactions.filter(t=>{const d=new Date(t.data+'T00:00:00');return d.getMonth()===n.getMonth()&&d.getFullYear()===n.getFullYear();});
+/* PARCELAMENTOS */
+function updateParcPreview(){
+  const desc=document.getElementById('p-desc').value.trim();
+  const valor=parseFloat(document.getElementById('p-valor').value)||0;
+  const total=parseInt(document.getElementById('p-total').value)||0;
+  const prev=document.getElementById('p-preview');
+  if(desc&&valor>0&&total>1){
+    prev.style.display='block';
+    prev.innerHTML=`<strong style="color:var(--green)">${desc}</strong> — ${total}x de ${fmt(valor)} = Total: ${fmt(valor*total)}`;
+  } else {prev.style.display='none';}
+}
+['p-desc','p-valor','p-total'].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el)el.addEventListener('input',updateParcPreview);
+});
+
+async function addParcelamento(){
+  const desc=document.getElementById('p-desc').value.trim();
+  const valor=parseFloat(document.getElementById('p-valor').value);
+  const total=parseInt(document.getElementById('p-total').value);
+  const inicio=document.getElementById('p-inicio').value;
+  if(!desc||!valor||valor<=0||!total||total<2||!inicio){setMsg('parc-form-msg','Preencha todos os campos corretamente.');return;}
+  const btn=document.getElementById('btn-parc');btn.disabled=true;btn.textContent='Salvando...';
+  const uid=session.user?.id||session.id;
+  try{
+    const rows=await sbFetch('/rest/v1/parcelamentos',{method:'POST',body:JSON.stringify({
+      user_id:uid,descricao:desc,valor_parcela:valor,total_parcelas:total,
+      parcela_inicial:1,data_inicio:inicio+'-01',
+      categoria:document.getElementById('p-cat').value,
+      cartao:document.getElementById('p-cartao').value
+    })});
+    parcelamentos.unshift(rows[0]);
+    document.getElementById('p-desc').value='';document.getElementById('p-valor').value='';
+    document.getElementById('p-total').value='';document.getElementById('p-preview').style.display='none';
+    setMsg('parc-form-msg',`Parcelamento cadastrado! ${total}x de ${fmt(valor)}`,true);
+    setTimeout(()=>{const el=document.getElementById('parc-form-msg');if(el)el.textContent='';},3000);
+    showToast('Parcelamento cadastrado!');renderDashboard();
+  }catch(e){setMsg('parc-form-msg','Erro ao cadastrar.');}
+  btn.disabled=false;btn.textContent='Cadastrar parcelamento';
 }
 
-/* DASHBOARD */
-let cCat,cMes;
-function renderDashboard(){
-  const cur=getCurTxs();
-  const total=cur.reduce((a,t)=>a+t.valor,0);
-  const cred=cur.filter(t=>t.tipo==='credito').reduce((a,t)=>a+t.valor,0);
-  const deb=cur.filter(t=>t.tipo==='debito').reduce((a,t)=>a+t.valor,0);
-  document.getElementById('metrics-row').innerHTML=`
-    <div class="metric"><div class="metric-label">Total este mês</div><div class="metric-value green">${fmt(total)}</div></div>
-    <div class="metric"><div class="metric-label">Crédito</div><div class="metric-value">${fmt(cred)}</div></div>
-    <div class="metric"><div class="metric-label">Débito</div><div class="metric-value">${fmt(deb)}</div></div>
-    <div class="metric"><div class="metric-label">Lançamentos</div><div class="metric-value">${cur.length}</div></div>`;
+async function deleteParcelamento(id){
+  if(!confirm('Excluir este parcelamento? Todas as parcelas futuras serão removidas.'))return;
+  try{
+    await sbFetch('/rest/v1/parcelamentos?id=eq.'+id,{method:'DELETE',headers:{'Prefer':''}});
+    parcelamentos=parcelamentos.filter(p=>p.id!==id);
+    showToast('Parcelamento excluído.');renderParcelamentos();renderDashboard();
+  }catch(e){showToast('Erro ao excluir.',true);}
+}
 
-  const catMap={};cur.forEach(t=>catMap[t.categoria]=(catMap[t.categoria]||0)+t.valor);
-  const cLabels=Object.keys(catMap);
-  const cVals=cLabels.map(c=>catMap[c]);
-  const cColors=cLabels.map(c=>(categorias.find(x=>x.nome===c)||{cor:'#6b7280'}).cor);
-  document.getElementById('legend-cat').innerHTML=cLabels.map((c,i)=>`<span><span class="ldot" style="background:${cColors[i]}"></span>${c}</span>`).join('');
-  if(cCat)cCat.destroy();
-  if(cVals.length)cCat=new Chart(document.getElementById('chartCat'),{type:'doughnut',data:{labels:cLabels,datasets:[{data:cVals,backgroundColor:cColors,borderWidth:2,borderColor:'#111'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+fmt(ctx.raw)}}}}});
+function renderParcelamentos(){
+  const n=new Date();
+  const mesAtual=n.getFullYear()*12+n.getMonth();
+  const ativos=parcelamentos.filter(p=>{
+    const d=new Date(p.data_inicio+'T00:00:00');
+    const mesInicio=d.getFullYear()*12+d.getMonth();
+    const mesFim=mesInicio+(p.total_parcelas-p.parcela_inicial);
+    return mesFim>=mesAtual;
+  });
+  const encerrados=parcelamentos.filter(p=>{
+    const d=new Date(p.data_inicio+'T00:00:00');
+    const mesInicio=d.getFullYear()*12+d.getMonth();
+    const mesFim=mesInicio+(p.total_parcelas-p.parcela_inicial);
+    return mesFim<mesAtual;
+  });
 
-  const n=new Date(),mL=[],crD=[],dbD=[];
-  for(let i=5;i>=0;i--){
-    const d=new Date(n.getFullYear(),n.getMonth()-i,1);
-    mL.push(MONTHS[d.getMonth()]);
-    const mt=transactions.filter(t=>{const td=new Date(t.data+'T00:00:00');return td.getMonth()===d.getMonth()&&td.getFullYear()===d.getFullYear();});
-    crD.push(mt.filter(t=>t.tipo==='credito').reduce((a,t)=>a+t.valor,0));
-    dbD.push(mt.filter(t=>t.tipo==='debito').reduce((a,t)=>a+t.valor,0));
-  }
-  if(cMes)cMes.destroy();
-  cMes=new Chart(document.getElementById('chartMensal'),{type:'bar',data:{labels:mL,datasets:[{label:'Crédito',data:crD,backgroundColor:'#22c55e',borderRadius:4},{label:'Débito',data:dbD,backgroundColor:'#f59e0b',borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{color:'#666',autoSkip:false}},y:{grid:{color:'#1a1a1a'},ticks:{color:'#666',callback:v=>'R$'+Math.round(v)}}}}});
+  const renderCard=(p,enc)=>{
+    const d=new Date(p.data_inicio+'T00:00:00');
+    const mesInicio=d.getFullYear()*12+d.getMonth();
+    const parcAtual=Math.max(p.parcela_inicial,p.parcela_inicial+(mesAtual-mesInicio));
+    const parcMostrar=Math.min(parcAtual,p.total_parcelas);
+    const pct=Math.round((parcMostrar/p.total_parcelas)*100);
+    const cor=(categorias.find(c=>c.nome===p.categoria)||{cor:'#22c55e'}).cor;
+    return`<div class="parc-card" style="margin-bottom:10px;${enc?'opacity:.6':''}">
+      <div class="parc-info">
+        <div class="parc-desc">${p.descricao}</div>
+        <div class="parc-meta">${p.categoria} · ${p.cartao} · ${p.total_parcelas}x de ${fmt(p.valor_parcela)}</div>
+        <div class="parc-progress">
+          <div class="parc-bar-bg"><div class="parc-bar-fill" style="width:${pct}%;background:${cor}"></div></div>
+          <span style="font-size:12px;color:var(--text3);white-space:nowrap">${enc?'Encerrado':parcMostrar+'/'+p.total_parcelas}</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+        <div class="parc-valor">${fmt(p.valor_parcela)}<span style="font-size:11px;color:var(--text3)">/mês</span></div>
+        ${!enc?`<button class="btn-danger" onclick="deleteParcelamento(${p.id})">Excluir</button>`:''}
+      </div>
+    </div>`;
+  };
 
-  const rl=document.getElementById('recent-list');
-  const rec=transactions.slice(0,5);
-  if(!rec.length){rl.innerHTML='<div class="empty">Nenhum lançamento ainda.</div>';return;}
-  rl.innerHTML=`<div class="tbl-wrap"><table><thead><tr><th>Data</th><th>Descrição</th><th>Categoria</th><th>Tipo</th><th style="text-align:right">Valor</th></tr></thead><tbody>`+
-    rec.map(t=>`<tr><td>${t.data.split('-').reverse().join('/')}</td><td>${t.descricao}</td>
-    <td><span class="pill" style="background:${(categorias.find(c=>c.nome===t.categoria)||{cor:'#333'}).cor}22;color:${(categorias.find(c=>c.nome===t.categoria)||{cor:'#aaa'}).cor}">${t.categoria}</span></td>
-    <td><span class="pill ${t.tipo==='credito'?'pill-cred':'pill-deb'}">${t.tipo}</span></td>
-    <td style="text-align:right;font-weight:500">${fmt(t.valor)}</td></tr>`).join('')+'</tbody></table></div>';
+  document.getElementById('parc-ativos').innerHTML=ativos.length?ativos.map(p=>renderCard(p,false)).join(''):'<div class="empty">Nenhum parcelamento ativo.</div>';
+  document.getElementById('parc-encerrados').innerHTML=encerrados.length?encerrados.map(p=>renderCard(p,true)).join(''):'<div class="empty">Nenhum encerrado ainda.</div>';
 }
 
 /* HISTÓRICO */
 function populateMonthFilter(){
   const sel=document.getElementById('filter-mes');const cur=sel.value;
   const ms=[...new Set(transactions.map(t=>t.data.substring(0,7)))].sort().reverse();
+  if(!ms.includes(thisMonth()))ms.unshift(thisMonth());
   sel.innerHTML='<option value="">Todos os meses</option>'+ms.map(m=>`<option value="${m}" ${m===cur?'selected':''}>${MONTHS[parseInt(m.split('-')[1])-1]+'/'+m.split('-')[0]}</option>`).join('');
 }
 
@@ -514,21 +711,30 @@ function renderHistorico(){
   const mes=document.getElementById('filter-mes').value;
   const cat=document.getElementById('filter-cat').value;
   const tipo=document.getElementById('filter-tipo').value;
-  const list=transactions.filter(t=>{
-    if(mes&&!t.data.startsWith(mes))return false;
-    if(cat&&t.categoria!==cat)return false;
-    if(tipo&&t.tipo!==tipo)return false;
-    return true;
-  });
+  let list;
+  if(mes){list=getAllTxForMonth(mes);}
+  else{
+    const meses=[...new Set(transactions.map(t=>t.data.substring(0,7)))];
+    list=transactions;
+    parcelamentos.forEach(p=>{
+      meses.forEach(m=>{const pv=getParcVirtuais(m).filter(x=>x.parc_id===p.id);list=[...list,...pv];});
+    });
+    const curM=thisMonth();
+    const pv=getParcVirtuais(curM);
+    list=[...list,...pv.filter(x=>!list.find(t=>t.id===x.id))];
+  }
+  if(cat)list=list.filter(t=>t.categoria===cat);
+  if(tipo)list=list.filter(t=>t.tipo===tipo);
+  list=[...list].sort((a,b)=>b.data.localeCompare(a.data));
   const body=document.getElementById('hist-body');
   if(!list.length){body.innerHTML='<tr><td colspan="7"><div class="empty">Nenhum lançamento encontrado.</div></td></tr>';return;}
   body.innerHTML=list.map(t=>`<tr>
     <td>${t.data.split('-').reverse().join('/')}</td><td>${t.descricao}</td>
     <td><span class="pill" style="background:${(categorias.find(c=>c.nome===t.categoria)||{cor:'#333'}).cor}22;color:${(categorias.find(c=>c.nome===t.categoria)||{cor:'#aaa'}).cor}">${t.categoria}</span></td>
-    <td><span class="pill ${t.tipo==='credito'?'pill-cred':'pill-deb'}">${t.tipo}</span></td>
+    <td><span class="pill ${t.tipo==='credito'?'pill-cred':t.tipo==='parcela'?'pill-parc':'pill-deb'}">${t.tipo}</span></td>
     <td>${t.cartao}</td>
     <td style="text-align:right;font-weight:500">${fmt(t.valor)}</td>
-    <td><button class="btn-danger" onclick="deleteTransaction(${t.id})">Excluir</button></td>
+    <td>${typeof t.id==='number'?`<button class="btn-danger" onclick="deleteTransaction(${t.id})">Excluir</button>`:''}</td>
   </tr>`).join('');
 }
 
@@ -537,17 +743,18 @@ async function setLimit(){
   const cat=document.getElementById('lim-cat').value;
   const val=parseFloat(document.getElementById('lim-val').value);
   if(!val||val<=0)return;
+  const uid=session.user?.id||session.id;
   try{
-    await sbFetch('/rest/v1/limites',{method:'POST',headers:{'Prefer':'resolution=merge-duplicates,return=representation'},body:JSON.stringify({user_id:session.user.id,categoria:cat,valor:val})});
+    await sbFetch('/rest/v1/limites',{method:'POST',headers:{'Prefer':'resolution=merge-duplicates,return=representation'},body:JSON.stringify({user_id:uid,categoria:cat,valor:val})});
     limites[cat]=val;document.getElementById('lim-val').value='';showToast('Limite salvo!');renderLimites();
   }catch(e){showToast('Erro ao salvar.',true);}
 }
 
 function renderLimites(){
-  const cur=getCurTxs();
+  const all=getAllTxForMonth(thisMonth());
   const rows=categorias.map(cat=>{
     const lim=limites[cat.nome];
-    const gasto=cur.filter(t=>t.categoria===cat.nome).reduce((a,t)=>a+t.valor,0);
+    const gasto=all.filter(t=>t.categoria===cat.nome).reduce((a,t)=>a+t.valor,0);
     const pct=lim?Math.min(100,Math.round((gasto/lim)*100)):null;
     const color=pct>=90?'#ef4444':pct>=70?'#f59e0b':'#22c55e';
     return`<div class="limit-row">
@@ -557,19 +764,18 @@ function renderLimites(){
       ${pct!==null?`<div style="width:36px;text-align:right;font-size:12px;font-weight:500;color:${color}">${pct}%</div>`:'<div style="width:36px"></div>'}
     </div>`;
   }).join('');
-  document.getElementById('limites-list').innerHTML=`<div class="card"><div class="card-title">Uso dos limites — mês atual</div>${rows}</div>`;
+  document.getElementById('limites-list').innerHTML=`<div class="card"><div class="card-title">Uso dos limites — mês atual (incluindo parcelas)</div>${rows}</div>`;
 }
 
 /* CONFIG */
 function renderConfig(){
-  const cl=document.getElementById('cats-list');
-  cl.innerHTML=categorias.map(c=>`<div class="tag-item">
+  document.getElementById('cats-list').innerHTML=categorias.map(c=>`<div class="tag-item">
     <span class="tag-dot" style="background:${c.cor}"></span>${c.nome}
     <button class="tag-del" onclick="delCategoria(${c.id},'${c.nome}')">×</button>
   </div>`).join('');
-  const kl=document.getElementById('cards-list');
-  kl.innerHTML=cartoes.map(c=>`<div class="tag-item">
-    <span class="tag-dot" style="background:${c.tipo==='credito'?'#22c55e':'#f59e0b'}"></span>${c.nome} <span style="font-size:11px;color:var(--text3)">${c.tipo}</span>
+  document.getElementById('cards-list').innerHTML=cartoes.map(c=>`<div class="tag-item">
+    <span class="tag-dot" style="background:${c.tipo==='credito'?'#22c55e':'#f59e0b'}"></span>${c.nome}
+    <span style="font-size:11px;color:var(--text3)">${c.tipo}</span>
     <button class="tag-del" onclick="delCartao(${c.id})">×</button>
   </div>`).join('');
 }
@@ -578,8 +784,9 @@ async function addCategoria(){
   const nome=document.getElementById('new-cat-nome').value.trim();
   const cor=document.getElementById('new-cat-cor').value;
   if(!nome)return;
+  const uid=session.user?.id||session.id;
   try{
-    const rows=await sbFetch('/rest/v1/categorias',{method:'POST',body:JSON.stringify({user_id:session.user.id,nome,cor})});
+    const rows=await sbFetch('/rest/v1/categorias',{method:'POST',body:JSON.stringify({user_id:uid,nome,cor})});
     categorias.push(rows[0]);categorias.sort((a,b)=>a.nome.localeCompare(b.nome));
     document.getElementById('new-cat-nome').value='';populateSelects();renderConfig();showToast('Categoria adicionada!');
   }catch(e){showToast('Essa categoria já existe.',true);}
@@ -597,8 +804,9 @@ async function addCartao(){
   const nome=document.getElementById('new-card-nome').value.trim();
   const tipo=document.getElementById('new-card-tipo').value;
   if(!nome)return;
+  const uid=session.user?.id||session.id;
   try{
-    const rows=await sbFetch('/rest/v1/cartoes',{method:'POST',body:JSON.stringify({user_id:session.user.id,nome,tipo})});
+    const rows=await sbFetch('/rest/v1/cartoes',{method:'POST',body:JSON.stringify({user_id:uid,nome,tipo})});
     cartoes.push(rows[0]);cartoes.sort((a,b)=>a.nome.localeCompare(b.nome));
     document.getElementById('new-card-nome').value='';populateSelects();renderConfig();showToast('Cartão adicionado!');
   }catch(e){showToast('Esse cartão já existe.',true);}
@@ -615,12 +823,11 @@ async function delCartao(id){
 /* ADMIN */
 async function renderAdmin(){
   try{
-    const [users,txs]=await Promise.all([
+    const[users,txs]=await Promise.all([
       sbFetch('/rest/v1/profiles?select=*&order=created_at.desc'),
       sbFetch('/rest/v1/gastos?select=*,profiles(nome)&order=data.desc,id.desc')
     ]);
     allUsers=users;allTx=txs;
-    const totalGeral=txs.reduce((a,t)=>a+t.valor,0);
     const n=new Date();
     const txMes=txs.filter(t=>{const d=new Date(t.data+'T00:00:00');return d.getMonth()===n.getMonth()&&d.getFullYear()===n.getFullYear();});
     document.getElementById('admin-metrics').innerHTML=`
@@ -643,7 +850,7 @@ async function renderAdmin(){
     const ms=[...new Set(txs.map(t=>t.data.substring(0,7)))].sort().reverse();
     document.getElementById('adm-filter-mes').innerHTML='<option value="">Todos os meses</option>'+ms.map(m=>`<option value="${m}">${MONTHS[parseInt(m.split('-')[1])-1]+'/'+m.split('-')[0]}</option>`).join('');
     renderAdminTx();
-  }catch(e){showToast('Erro ao carregar admin: '+e.message,true);}
+  }catch(e){showToast('Erro ao carregar admin.',true);}
 }
 
 function renderAdminTx(){
@@ -659,60 +866,27 @@ function renderAdminTx(){
   body.innerHTML=list.map(t=>`<tr>
     <td style="color:var(--text2)">${t.profiles?.nome||'-'}</td>
     <td>${t.data.split('-').reverse().join('/')}</td>
-    <td>${t.descricao}</td>
-    <td>${t.categoria}</td>
+    <td>${t.descricao}</td><td>${t.categoria}</td>
     <td><span class="pill ${t.tipo==='credito'?'pill-cred':'pill-deb'}">${t.tipo}</span></td>
     <td style="text-align:right;font-weight:500">${fmt(t.valor)}</td>
   </tr>`).join('');
 }
 
-/* INIT */
-(async()=>{
-  try{
-    const res=await sbFetch('/auth/v1/user');
-    if(res?.id){session={user:res,access_token:null};
-      const stored=localStorage.getItem('sb_session');
-      if(stored){session=JSON.parse(stored);await loadApp();}
-    }
-  }catch(e){}
-})();
-
-async function doLogin(){
-  const email=document.getElementById('login-email').value.trim();
-  const pass=document.getElementById('login-pass').value;
-  if(!email||!pass){setMsg('login-msg','Preencha e-mail e senha.');return;}
-  const btn=document.getElementById('btn-login');btn.disabled=true;btn.textContent='Entrando...';
-  try{
-    const data=await fetch(SB_URL+'/auth/v1/token?grant_type=password',{method:'POST',headers:hdrs(),body:JSON.stringify({email,password:pass})}).then(r=>r.json());
-    if(data.error)throw new Error(data.error);
-    session=data;localStorage.setItem('sb_session',JSON.stringify(data));await loadApp();
-  }catch(e){setMsg('login-msg','E-mail ou senha incorretos.');}
-  btn.disabled=false;btn.textContent='Entrar';
-}
-
-async function doLogout(){
-  try{await fetch(SB_URL+'/auth/v1/logout',{method:'POST',headers:hdrs(session?.access_token)});}catch(e){}
-  session=null;profile=null;transactions=[];categorias=[];cartoes=[];limites={};
-  localStorage.removeItem('sb_session');
-  document.getElementById('auth-screen').style.display='flex';
-  document.getElementById('app-screen').style.display='none';
-}
-
-const _origLoadApp=loadApp;
-async function loadApp(){
-  if(!session?.access_token){doLogout();return;}
-  document.getElementById('auth-screen').style.display='none';
-  document.getElementById('app-screen').style.display='block';
-  await loadUserData();renderDashboard();
-}
-
+/* INIT — manter conectado */
 (async()=>{
   const stored=localStorage.getItem('sb_session');
   if(stored){
     try{
       session=JSON.parse(stored);
       const ok=await fetch(SB_URL+'/auth/v1/user',{headers:hdrs(session.access_token)}).then(r=>r.ok);
-      if(ok)await loadApp(); else{localStorage.removeItem('sb_session');session=null;}
+      if(ok){
+        await loadApp();
+        setInterval(async()=>{await refreshSession();},55*60*1000);
+      } else {
+        const refreshed=await refreshSession();
+        if(refreshed){await loadApp();setInterval(async()=>{await refreshSession();},55*60*1000);}
+        else{localStorage.removeItem('sb_session');}
+      }
     }catch(e){localStorage.removeItem('sb_session');}
   }
 })();
